@@ -1,0 +1,11 @@
+# Ignorar carpetas generadas por NetBeans
+nbproject/private/
+build/
+dist/
+
+# Ignorar archivos compilados
+*.class
+
+# Ignorar archivos de configuración del sistema
+*.log
+*.DS_Store
