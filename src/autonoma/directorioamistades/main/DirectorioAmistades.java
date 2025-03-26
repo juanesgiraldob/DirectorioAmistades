@@ -106,6 +106,6 @@ public class DirectorioAmistades {
         System.out.println("taller: directorio de amistades");
         System.out.println("asignatura: programacion orientada a objetos");
         System.out.println("universidad: universidad autonoma de manizales");
-        System.out.println("Desarrolladores: [Juan Esteban Giraldo Betancur e Isabela Quintero Murillo]");
+        System.out.println("desarrolladores: [Juan Esteban Giraldo Betancur e Isabela Quintero Murillo]");
     }
 }
