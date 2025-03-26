@@ -39,7 +39,7 @@ public class DirectorioAmistades {
     }
 
     private static void mostrarMenu() {
-        System.out.println("\n- gestión de amigos -");
+        System.out.println("\n- Gestion de Amigos -");
         System.out.println("1. agregar nuevo amigo");
         System.out.println("2. buscar amigo");
         System.out.println("3. acerca de");
