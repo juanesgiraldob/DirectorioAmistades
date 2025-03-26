@@ -21,14 +21,14 @@ public class Amigo {
 
     private void validarCorreo(String correo) throws CorreoInvalidoException {
         if (correo == null || !correo.contains("@")) {
-            throw new CorreoInvalidoException("El correo electrónico debe contener @");
+            throw new CorreoInvalidoException("el correo electronico debe contener @");
         }
     }
 
     private void validarTelefono(String telefono) throws TelefonoInvalidoException {
         if (telefono == null || 
             (!telefono.startsWith("606") && !telefono.startsWith("30"))) {
-            throw new TelefonoInvalidoException("El teléfono debe iniciar con 606 o 30");
+            throw new TelefonoInvalidoException("el telefono debe iniciar con 606 o 30");
         }
     }
 

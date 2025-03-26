@@ -17,7 +17,7 @@ public class GestorAmigos {
         // Verificar duplicados por correo electrónico
         for (Amigo a : amigos) {
             if (a.getCorreoElectronico().equals(amigo.getCorreoElectronico())) {
-                throw new AmigoDuplicadoException("El amigo ya está registrado");
+                throw new AmigoDuplicadoException("el amigo ya esta registrado");
             }
         }
         amigos.add(amigo);
@@ -29,6 +29,6 @@ public class GestorAmigos {
                 return amigo;
             }
         }
-        throw new AmigosNoEncontradoException("Amigo no encontrado");
+        throw new AmigosNoEncontradoException("amigo no encontrado");
     }
 }
