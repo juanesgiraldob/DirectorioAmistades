@@ -9,6 +9,10 @@ import autonoma.directorioamistades.exceptions.Excepciones.TelefonoInvalidoExcep
 
 import java.util.Scanner;
 
+/**
+ * clase principal que gestiona el directorio de amistades
+ * permite agregar amigos, buscar amigos por correo y mostrar informacion del sistema
+ */
 public class DirectorioAmistades {
     private static GestorAmigos gestorAmigos = new GestorAmigos();
     private static Scanner scanner = new Scanner(System.in);
@@ -38,6 +42,9 @@ public class DirectorioAmistades {
         }
     }
 
+    /**
+     * muestra menu de opciones en consola
+     */
     private static void mostrarMenu() {
         System.out.println("\n- Gestion de Amigos -");
         System.out.println("1. agregar nuevo amigo");
@@ -47,6 +54,9 @@ public class DirectorioAmistades {
         System.out.print("elija una opcion: ");
     }
 
+    /**
+     * permite agregar un nuevo amigo solicitando sus datos al usuario
+     */
     private static void agregarNuevoAmigo() {
         try {
             System.out.print("ingrese nombres: ");
@@ -58,19 +68,19 @@ public class DirectorioAmistades {
             System.out.print("ingrese correo electronico: ");
             String correo = scanner.nextLine();
 
+            // crear instancia de amigo y agregarlo al gestor
             Amigo nuevoAmigo = new Amigo(nombres, telefono, correo);
             gestorAmigos.agregarAmigo(nuevoAmigo);
             System.out.println("amigo agregado exitosamente");
 
-        } catch (CorreoInvalidoException e) {
-            System.out.println("error: " + e.getMessage());
-        } catch (TelefonoInvalidoException e) {
-            System.out.println("error: " + e.getMessage());
-        } catch (AmigoDuplicadoException e) {
+        } catch (CorreoInvalidoException | TelefonoInvalidoException | AmigoDuplicadoException e) {
             System.out.println("error: " + e.getMessage());
         }
     }
 
+    /**
+     * permite buscar un amigo por su correo electronico
+     */
     private static void buscarAmigo() {
         try {
             System.out.print("ingrese correo electronico a buscar: ");
@@ -87,9 +97,12 @@ public class DirectorioAmistades {
         }
     }
 
+    /**
+     * muestra informacion acerca de la aplicacion
+     */
     private static void mostrarAcercaDe() {
         System.out.println("\n- acerca de -");
-        System.out.println("taller: gestion de contactos");
+        System.out.println("taller: directorio de amistades");
         System.out.println("asignatura: programacion orientada a objetos");
         System.out.println("universidad: universidad autonoma de manizales");
         System.out.println("Desarrolladores: [Juan Esteban Giraldo Betancur e Isabela Quintero Murillo]");
