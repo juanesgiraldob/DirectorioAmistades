@@ -10,10 +10,11 @@ import autonoma.directorioamistades.exceptions.Excepciones.TelefonoInvalidoExcep
 import java.util.Scanner;
 
 /**
- * clase principal que gestiona el directorio de amistades
- * permite agregar amigos, buscar amigos por correo y mostrar informacion del sistema
+ * clase principal que gestiona el directorio de amistades permite agregar
+ * amigos, buscar amigos por correo y mostrar informacion del sistema
  */
 public class DirectorioAmistades {
+
     private static GestorAmigos gestorAmigos = new GestorAmigos();
     private static Scanner scanner = new Scanner(System.in);
 
@@ -21,7 +22,7 @@ public class DirectorioAmistades {
         while (true) {
             mostrarMenu();
             int opcion = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
