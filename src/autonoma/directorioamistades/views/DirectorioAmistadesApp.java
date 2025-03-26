@@ -10,7 +10,7 @@ public class DirectorioAmistadesApp extends JFrame {
     public DirectorioAmistadesApp() {
         gestorAmigos = new GestorAmigos();
         setTitle("📘 DIRECTORIO DE AMIGOS");
-        setSize(400, 300);
+        setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
@@ -29,6 +29,10 @@ public class DirectorioAmistadesApp extends JFrame {
         panel.add(crearBoton("AGREGAR AMIGO ➕", e -> new AgregarAmigo(gestorAmigos)));
         panel.add(Box.createVerticalStrut(10));
         panel.add(crearBoton("BUSCAR AMIGO 🔎", e -> new BuscarAmigo(gestorAmigos)));
+        panel.add(Box.createVerticalStrut(10));
+        panel.add(crearBoton("ACERCA DEℹ️", e -> mostrarAcercaDe()));
+        panel.add(Box.createVerticalStrut(10));
+        panel.add(crearBoton("SALIR ❌", e -> System.exit(0))); 
     }
 
     private JButton crearBoton(String texto, java.awt.event.ActionListener action) {
@@ -40,6 +44,18 @@ public class DirectorioAmistadesApp extends JFrame {
         boton.setAlignmentX(Component.CENTER_ALIGNMENT);
         boton.addActionListener(action);
         return boton;
+    }
+
+    private void mostrarAcercaDe() {
+        String mensaje = """
+                📌 Taller: Directorio de Amistades
+                📖 Asignatura: Programación Orientada a Objetos
+                🏫 Universidad: Universidad Autónoma de Manizales
+                👨‍💻 Desarrolladores: Juan Esteban Giraldo Betancur e Isabela Quintero Murillo
+                """;
+
+        JOptionPane.showMessageDialog(this, mensaje, "Acerca de", JOptionPane.INFORMATION_MESSAGE);
+       
     }
 
     public static void main(String[] args) {
