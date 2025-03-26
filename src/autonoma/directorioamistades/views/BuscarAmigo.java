@@ -6,12 +6,12 @@ import autonoma.directorioamistades.exceptions.Excepciones.AmigosNoEncontradoExc
 import javax.swing.*;
 import java.awt.*;
 
-public class BuscarAmigoApp extends JFrame {
+public class BuscarAmigo extends JFrame {
     private JTextField txtBuscarCorreo;
     private JTextArea txtResultados;
     private GestorAmigos gestorAmigos;
 
-    public BuscarAmigoApp(GestorAmigos gestorAmigos) {
+    public BuscarAmigo(GestorAmigos gestorAmigos) {
         this.gestorAmigos = gestorAmigos;
         setTitle("🔎 Buscar Amigo");
         setSize(350, 300);

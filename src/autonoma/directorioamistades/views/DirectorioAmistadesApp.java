@@ -26,9 +26,9 @@ public class DirectorioAmistadesApp extends JFrame {
         panel.add(lblTitulo);
 
         panel.add(Box.createVerticalStrut(20));
-        panel.add(crearBoton("AGREGAR AMIGO ➕", e -> new AgregarAmigoApp(gestorAmigos)));
+        panel.add(crearBoton("AGREGAR AMIGO ➕", e -> new AgregarAmigo(gestorAmigos)));
         panel.add(Box.createVerticalStrut(10));
-        panel.add(crearBoton("BUSCAR AMIGO 🔎", e -> new BuscarAmigoApp(gestorAmigos)));
+        panel.add(crearBoton("BUSCAR AMIGO 🔎", e -> new BuscarAmigo(gestorAmigos)));
     }
 
     private JButton crearBoton(String texto, java.awt.event.ActionListener action) {

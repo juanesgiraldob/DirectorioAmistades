@@ -5,12 +5,12 @@ import autonoma.directorioamistades.models.GestorAmigos;
 import javax.swing.*;
 import java.awt.*;
 
-public class AgregarAmigoApp extends JFrame {
+public class AgregarAmigo extends JFrame {
     private JTextField txtNombre, txtTelefono, txtCorreo;
     private JTextArea txtResultados;
     private GestorAmigos gestorAmigos;
 
-    public AgregarAmigoApp(GestorAmigos gestorAmigos) {
+    public AgregarAmigo(GestorAmigos gestorAmigos) {
         this.gestorAmigos = gestorAmigos;
         setTitle("➕ Agregar Amigo");
         setSize(350, 350);
